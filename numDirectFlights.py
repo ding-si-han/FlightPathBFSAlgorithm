@@ -22,7 +22,7 @@ testSamples = 2000
 for i in range(5):
     percentageCities = percentageCitiesArray[i]
 
-    print("====== TEST CASE:", i, " - Number of Direct Flights", percentageCities * testSamples ,"========")
+    print("====== TEST CASE:", i + 1, " - Number of Direct Flights", percentageCities * testSamples ,"========")
     timeArray = []
     numTrials = 10
     for j in range(numTrials):
@@ -38,9 +38,9 @@ for i in range(5):
     averageTime = sum(timeArray)/ numTrials
     print(">>>>> AVERAGE OF 10 TRIALS:", averageTime)
 
-    samplingArray.append(percentageCities)
+    samplingArray.append(percentageCities * testSamples)
     resultArray.append(averageTime)
     print()
 
-print(samplingArray)
-print(resultArray)
+print("Number of Direct Flights:", samplingArray)
+print("Computation Time", resultArray)

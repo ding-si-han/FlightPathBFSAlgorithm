@@ -18,7 +18,7 @@ percentageCities = 0.01
 
 for i in range(testMin, testMax, testInterval):
      
-    print("==================== TEST CASE:", i, "====================")
+    print("==================== Number of Cities: ", i, "====================")
     timeArray = []
     numTrials = 10
     for j in range(numTrials):
@@ -38,8 +38,8 @@ for i in range(testMin, testMax, testInterval):
     resultArray.append(averageTime)
     print()
 
-print(samplingArray)
-print(resultArray)
+print("Number of Cities:", samplingArray)
+print("Computation Time", resultArray)
 
 
 
